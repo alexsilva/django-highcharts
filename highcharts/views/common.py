@@ -42,6 +42,9 @@ class HighChartsBasicView(JSONResponseMixin, AjaxResponseMixin):
     def get(self, request, *args, **kwargs):
         return self.get_ajax(request, *args, **kwargs)
 
+    def post(self, request, *args, **kwargs):
+        return self.get_ajax(request, *args, **kwargs)
+
     def get_ajax(self, request, *args, **kwargs):
         return self.render_json_response(self.get_data())
 
